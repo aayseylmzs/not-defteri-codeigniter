@@ -3,6 +3,8 @@
 namespace Config;
 
 use CodeIgniter\Database\Config;
+use CodeIgniter\Config\BaseConfig;
+
 
 /**
  * Database Configuration
@@ -198,4 +200,14 @@ class Database extends Config
             $this->defaultGroup = 'tests';
         }
     }
+
 }
+class MongoDBConfig extends BaseConfig
+{
+    public $host = 'localhost';
+    public $port = 27017;
+    public $database = 'notetaking';
+    public $username = ''; // MongoDB kullanıcı adı (varsa)
+    public $password = ''; // MongoDB şifre (varsa)
+}
+
